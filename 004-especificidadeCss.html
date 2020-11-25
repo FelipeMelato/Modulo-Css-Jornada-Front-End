@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade - CSS</title>
+
+    <style>
+        /* 0.0.0.1 */
+        p {
+            color: red;
+            
+        }
+        /* 0.0.1.1 */
+        .nova-cor{
+            color:lawngreen;
+
+            background: midnightblue;
+        }
+        /* 0.1.1.1 */
+        #nova-cor-id-1,
+        #nova-cor-id-2 {
+            color:mediumpurple
+        }
+        /* 1.1.1.1 */
+        .cor-mista{
+            color: olivedrab;
+            font-size: 30px;
+            font-style: italic;
+            background: palegoldenrod;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="cor-mista">Texto 1.</p>
+    <p class="nova-cor">Texto 2.</p>
+    <p>Texto 3.</p>
+    <p class="nova-cor" id="nova-cor-id-2">Texto 4.</p>
+    <p id="nova-cor-id-1" class="nova-cor">Texto 5.</p>
+</body>
+</html>
